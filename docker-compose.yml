@@ -1,0 +1,18 @@
+#nodejs:
+# image: bitnami/node:7
+#  volumes:
+#    - .:/app
+#    - /node_modules
+#  command: npm start
+#  links:
+#    - mongo
+#  ports:
+#    - 3000:3000
+#  container_name: poc-nodejs
+mongo: 
+  image: mongo:3.2
+  ports:
+    - 28017:27017
+  volumes:
+    - ./docker/mongodb:/data/db
+  container_name: poc-mongodb

@@ -1,0 +1,23 @@
+{
+  "name": "zup-poc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./api/app.js",
+    "test": "mocha ./api/test --timeout 10000"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "chai": "^4.0.1",
+    "chai-http": "^3.0.0",
+    "express": "~4.15.2",
+    "express-session": "^1.15.3",
+    "mocha": "^3.4.2",
+    "mongodb": "^2.2.27",
+    "mongoose": "^4.10.4",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "debug": "^2.6.8"
+  }
+}
