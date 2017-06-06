@@ -1,7 +1,7 @@
 # Leonardo Delfino / xy-inc
 ## Teste Desenvolvedor 3 - Backend as a Service
 
-#### Arquitetura:
+### Arquitetura:
 
  * Nodejs 6+
  * Express
@@ -10,7 +10,7 @@
  * Mocha + Chai para testes
  * Instalbul para cobertura de código
 
-#### Análise da Solução
+### Análise da Solução
 
 Foi escolhido a linguagem nodejs para desenvolvimento, devido a facilidade, domínio e necessidade de pouca escrita de código para desenvolver a solução deste problema. 
 
@@ -18,7 +18,7 @@ A escolha do MongoDB se deve ao fato de ser um banco não relacionado sem obriga
 
 A solução pode ser facilmente escalada utilizando um gerenciador de processos como o [PM2](https://github.com/Unitech/pm2) e adicionando  shards e/ou replicas sets ao MongoDB. 
 
-#### Instalação
+### Instalação
 Os pré-requisitos necessários para rodar o projeto é a instalação do [nodejs 6+](https://nodejs.org/en/) e o banco de dados MongoDB. O banco também foi disponibilizado via  docker, sendo necessário executar o comando abaixo para iniciar:
 
 
@@ -27,7 +27,7 @@ Os pré-requisitos necessários para rodar o projeto é a instalação do [nodej
 docker-compose up -d
 ```
 
-#### Execução
+### Execução
 O primeiro passo é clonar o projeto na sua máquina:
 
 ```sh
@@ -46,9 +46,9 @@ Para executar os testes e exibir o relatório de cobertura de código:
 npm test
 ```
 
-#### Documentação
+### Documentação
 
-**O primeiro conjunto de rotas disponibilizados é utilizado para a manipulação de entidades. As rotas disponíveis são:**
+##### O primeiro conjunto de rotas disponibilizados é utilizado para a manipulação de entidades. As rotas disponíveis são:
 
 | Método | Rota | Descrição |
 | ------------- | ------------- | -------------|
@@ -105,7 +105,7 @@ curl -X GET \
   -H 'cache-control: no-cache' \
 ``` 
 
-**O segundo conjunto de rotas disponíveis é para a manipulação de entidades. As rotas disponíveis são:**
+##### O segundo conjunto de rotas disponíveis é para a manipulação de entidades. As rotas disponíveis são:
 
 | Método | Rota | Descrição |
 | ------------- | ------------- | -------------|
