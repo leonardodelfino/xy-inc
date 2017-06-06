@@ -12,16 +12,14 @@
 
 ### Análise da Solução
 
-Foi escolhido a linguagem nodejs para desenvolvimento, devido a facilidade, domínio e necessidade de pouca escrita de código para desenvolver a solução deste problema. 
+A linguagem escolhida para desenvovimento foi  **nodejs**, devido a facilidade, domínio e necessidade de pouco código para desenvolver a solução deste problema. 
 
-A escolha do MongoDB se deve ao fato de ser um banco não relacionado sem obrigatóriedade de ter esquemas definidos, o que auxilia na solução de montar uma api que fornece serviço para persistência de dados de entidades genéricas, sendo assim fácil a alteração criação e alteração dos modelos. 
+A escolha do MongoDB se deve ao fato de ser um banco não relacional, sem obrigatóriedade de ter esquemas definidos. Essas caractersticas auxiliam na solução de montar uma api que fornece serviço para persistência de dados de entidades genéricas, facilitando a criação e alteração dos modelos. 
 
-A solução pode ser facilmente escalada utilizando um gerenciador de processos como o [PM2](https://github.com/Unitech/pm2) e adicionando  shards e/ou replicas sets ao MongoDB. 
+A solução pode ser escalada utilizando um gerenciador de processos como o [PM2](https://github.com/Unitech/pm2) e adicionando  shards e/ou replicas sets ao MongoDB. 
 
 ### Instalação
-Os pré-requisitos necessários para rodar o projeto é a instalação do [nodejs 6+](https://nodejs.org/en/) e o banco de dados MongoDB. O banco também foi disponibilizado via  docker, sendo necessário executar o comando abaixo para iniciar:
-
-
+Os pré-requisitos necessários para rodar o projeto é a instalação do [nodejs 6+](https://nodejs.org/en/) e o banco de dados MongoDB. O banco foi disponibilizado via  docker, sendo necessário executar o comando abaixo para iniciar:
 
 ```sh
 docker-compose up -d
@@ -34,13 +32,13 @@ O primeiro passo é clonar o projeto na sua máquina:
 git clone git@github.com:leonardodelfino/xy-inc.git
 ```
 
-Então navegue até a pasta do projeto e para inciar o servidor execute:
+Então navegue até a pasta criada e execute o comando abaixo para inciar o servidor.
 
 ```sh
 npm start
 ```
 
-Para executar os testes e exibir o relatório de cobertura de código:
+Para executar os testes e exibir o relatório de cobertura de código execute o seguinte comando:
 
 ```sh
 npm test
@@ -48,7 +46,7 @@ npm test
 
 ### Documentação
 
-##### O primeiro conjunto de rotas disponibilizados é utilizado para a manipulação de entidades. As rotas disponíveis são:
+##### As rotas listadas abaixo são utilizadas para criação e exibição dos modelos:
 
 | Método | Rota | Descrição |
 | ------------- | ------------- | -------------|
@@ -105,7 +103,7 @@ curl -X GET \
   -H 'cache-control: no-cache' \
 ``` 
 
-##### O segundo conjunto de rotas disponíveis é para a manipulação de entidades. As rotas disponíveis são:
+##### As rotas listadas abaixo são utilizadas para realizar operações de CRUD nos modelos criados.
 
 | Método | Rota | Descrição |
 | ------------- | ------------- | -------------|
