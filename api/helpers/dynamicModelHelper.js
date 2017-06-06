@@ -12,19 +12,19 @@ let Entity = mongoose.model('Entity');
 let convertTypes = (type) => {
     switch (type.toLowerCase()) {
 
+        case "number":
         case "int":
         case "integer":
         case "float":
         case "double":
-        case "number":
             return Number;
 
         case "date":
         case "datetime":
             return Date;
 
-        case "bool":
         case "boolean":
+        case "bool":
             return Boolean;
         
         default:

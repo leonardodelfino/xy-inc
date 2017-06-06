@@ -1,3 +1,5 @@
+process.env.NODE_ENV = 'test';
+
 const express = require('express'),
     path = require('path'),
     bodyParser = require('body-parser'),
@@ -51,13 +53,9 @@ mongoose.connect(configMongo.url)
         server.on('listening', () => {
             console.log("Server started on port " + configServer.port);
         });
-        
-        
     })
-    .catch((err) => {
+    .catch(() => {
         console.error("Error initiating connection to the database...");
     });
 
-module.exports = server
-
-
+module.exports = server;

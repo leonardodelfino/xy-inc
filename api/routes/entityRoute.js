@@ -14,4 +14,7 @@ module.exports = (app) => {
         .get(entityCtrl.find)
         .post(entityCtrl.create);
 
+    app.route('/api/entity/:_id')
+        .get(entityCtrl.find)
+
 };

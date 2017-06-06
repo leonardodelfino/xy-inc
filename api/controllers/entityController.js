@@ -11,7 +11,7 @@ let Entity = mongoose.model('Entity');
  * @param {Function} next Next route for handling errors
  */
 exports.find = (req, res, next) => {
-    let params = req.params || {};
+    let params = req.params;
 
     Entity.find(params).then((records) => {
         res.json(records);
@@ -26,7 +26,7 @@ exports.find = (req, res, next) => {
  * @param {Function} next Next route for handling errors
  */
 exports.create = (req, res, next) => {
-    let newEntity = new Entity(req.body || {});
+    let newEntity = new Entity(req.body);
 
     newEntity.save().then((newRecord) => {
         res.json(newRecord);
