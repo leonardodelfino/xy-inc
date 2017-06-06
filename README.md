@@ -22,7 +22,7 @@ A solução pode ser escalada utilizando um gerenciador de processos como o [PM2
 O primeiro passo é clonar o projeto na sua máquina:
 
 ```sh
-git clone git@github.com:leonardodelfino/xy-inc.git
+git clone https://github.com/leonardodelfino/xy-inc.git
 ```
 
 Os pré-requisitos necessários para rodar o projeto é a instalação do [nodejs 6+](https://nodejs.org/en/) e o banco de dados MongoDB. O banco foi disponibilizado via  docker, sendo necessário executar o comando abaixo para iniciar:
