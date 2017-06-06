@@ -18,7 +18,7 @@ A escolha do MongoDB se deve ao fato de ser um banco não relacional, sem obriga
 
 A solução pode ser escalada utilizando um gerenciador de processos como o [PM2](https://github.com/Unitech/pm2) e adicionando  shards e/ou replicas sets ao MongoDB. 
 
-### Instalação
+### Pré-requisitos
 Os pré-requisitos necessários para rodar o projeto é a instalação do [nodejs 6+](https://nodejs.org/en/) e o banco de dados MongoDB. O banco foi disponibilizado via  docker, sendo necessário executar o comando abaixo para iniciar:
 
 ```sh
@@ -32,7 +32,12 @@ O primeiro passo é clonar o projeto na sua máquina:
 git clone git@github.com:leonardodelfino/xy-inc.git
 ```
 
-Então navegue até a pasta criada e execute o comando abaixo para inciar o servidor.
+Então navegue até a pasta criada e execute o comando abaixo para instalar as dependências.
+```sh
+npm install
+```
+
+Para inciar o servidor execute o seguinte comando:
 
 ```sh
 npm start
