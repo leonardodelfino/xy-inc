@@ -28,6 +28,11 @@ exports.find = (req, res, next) => {
 exports.create = (req, res, next) => {
     let newEntity = new Entity(req.body);
 
+    if(newEntity.name == "entity") {
+        next(Error(`Can not create a model with the reserved 'entity' name`));
+        return;
+    }
+
     newEntity.save().then((newRecord) => {
         res.json(newRecord);
     }).catch(next);

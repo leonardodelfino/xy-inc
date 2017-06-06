@@ -45,7 +45,11 @@ module.exports = {
                     "required": true
                 }
             ]
-        }
+        },
+        reservedRecord : {
+            "name": "entity",
+            "attributes": []
+        },
     },
 
     employee: {

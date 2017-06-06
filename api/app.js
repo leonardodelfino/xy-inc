@@ -1,5 +1,3 @@
-process.env.NODE_ENV = 'test';
-
 const express = require('express'),
     path = require('path'),
     bodyParser = require('body-parser'),
@@ -46,8 +44,7 @@ mongoose.connect(configMongo.url)
         server.listen(configServer.port);
 
         server.on('error', (error) => {
-            console.error("Error starting server...");
-            throw error;
+            console.error("Error starting server. Detail: ", error.mesage);
         });
 
         server.on('listening', () => {

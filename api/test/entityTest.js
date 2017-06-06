@@ -27,6 +27,7 @@ describe('Entity', () => {
         let anotherRecord = new Entity(mock.entity.anotherRecord);
         let invalidRecord = new Entity(mock.entity.invalidRecord);
         let duplicatedRecord = new Entity(mock.entity.duplicatedRecord);
+        let reservedRecord = new Entity(mock.entity.reservedRecord);
 
         it('it should GET all the entities', (done) => {
             chai.request(server)
@@ -112,6 +113,17 @@ describe('Entity', () => {
                     assert.equal(res.status, 200);
                     assert.typeOf(res.body, 'array');
                     assert.lengthOf(res.body, 2);
+                    done();
+                });
+        });
+
+        it('it should not POST a new entity with the reserved name entity', (done) => {
+            chai.request(server)
+                .post('/api/entity')
+                .send(reservedRecord)
+                .end((err, res) => {
+                    assert.equal(res.status, 500);
+                    assert.property(res.body, "error");
                     done();
                 });
         });
