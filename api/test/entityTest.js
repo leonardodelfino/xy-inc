@@ -127,8 +127,6 @@ describe('Entity', () => {
                     done();
                 });
         });
-
-
     });
 
     describe('Testing dynamic entity routes', () => {
@@ -161,7 +159,7 @@ describe('Entity', () => {
                     done();
                 });
         });
-        
+
         it('it should UPDATE a employee with specifed id', (done) => {
             chai.request(server)
                 .put('/api/employee/' + employeeId)
@@ -216,7 +214,7 @@ describe('Entity', () => {
 
         it('it should DELETE a employee with a specific id', (done) => {
             chai.request(server)
-                .delete('/api/employee/'  + employeeId)
+                .delete('/api/employee/' + employeeId)
                 .end((err, res) => {
                     assert.equal(res.status, 200);
                     assert.property(res.body, "ok");
@@ -249,5 +247,4 @@ describe('Entity', () => {
                 });
         });
     });
-
 });
