@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./api/app.js",
+    "start": "node ./api/app.js",
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha $(find api -name '*Test.js')"
   },
   "dependencies": {
@@ -15,8 +15,7 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
     "mongodb": "^2.2.27",
-    "mongoose": "^4.10.4",
-    "nodemon": "^1.11.0"
+    "mongoose": "^4.10.4"
   },
   "devDependencies": {
     "debug": "^2.6.8"
