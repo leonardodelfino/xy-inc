@@ -4,4 +4,4 @@ mongo:
     - 28017:27017
   volumes:
     - ./docker/mongodb:/data/db
-  container_name: poc-mongodb
+  container_name: xy-mongodb
