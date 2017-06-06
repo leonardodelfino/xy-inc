@@ -1,7 +1,7 @@
 # Leonardo Delfino / xy-inc
 ## Teste Desenvolvedor 3 - Backend as a Service
 
-### Arquitetura:
+### Arquitetura
 
  * Nodejs 6+
  * Express
